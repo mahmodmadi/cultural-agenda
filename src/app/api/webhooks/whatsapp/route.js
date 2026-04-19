@@ -1,5 +1,5 @@
-//import { NextResponse } from 'next/server';
-//import { adminDb } from '@/lib/firebaseAdmin';
+import { NextResponse } from 'next/server';
+import { adminDb } from '@/lib/firebaseAdmin';
 
 // This webhook can be called by a cron job or external service (like Twilio or Make/Zapier)
 // to trigger WhatsApp messages for subscribers.

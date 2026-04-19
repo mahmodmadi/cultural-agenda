@@ -1,5 +1,5 @@
-//import { db } from './firebase';
-//import { collection, addDoc, getDocs, query, where, updateDoc, doc, serverTimestamp, orderBy } from 'firebase/firestore';
+import { db } from '@/lib/firebase';
+import { collection, addDoc, getDocs, query, where, updateDoc, doc, serverTimestamp, orderBy } from 'firebase/firestore';
 
 const eventsCollection = collection(db, 'events');
 const subscribersCollection = collection(db, 'subscribers');
