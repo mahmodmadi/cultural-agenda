@@ -11,6 +11,9 @@ export async function POST(request) {
     }
 
     // Fetch all active subscribers
+    if (!adminDb) {
+      return NextResponse.json({ error: 'Firebase Admin not initialized due to missing environment variables.' }, { status: 500 });
+    }
     const subscribersSnapshot = await adminDb.collection('subscribers').where('active', '==', true).get();
     
     if (subscribersSnapshot.empty) {
